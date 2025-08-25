@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manahil Aamir - Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="profile-header">
+            <img src="muslim-woman.png" alt="Profile Picture" class="small-profile-pic">
+            <h1 color="#ef49e1">Portfolio</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showSection('home')" >Home</a></li>
+                <li><a href="#" onclick="showSection('about')">About</a></li>
+                <li><a href="#" onclick="showSection('services')">Services</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <div class="home-container">
+            <div class="home-left">
+                <span id="typing"></span>
+            </div>
+            <div class="home-center">
+                <img src="Mypic.jpg" alt="Profile Image" class="home-profile-pic">
+            </div>
+            <div class="home-right">
+                <div class="content-box" onclick="showText('home-content')">
+                    <div class="social-icons">
+                    <a href="https://www.twitter.com"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.facebook.com"><i class='bx bxl-facebook-circle' ></i></a>
+                    <a href="https://www.youtube.com"><i class='bx bxl-instagram-alt' ></i></a>
+                    <a href="https://www.twitter.com"><i class='bx bxl-youtube' ></i></a>
+                    <a href="https://github.com"><i class='bx bxl-github' ></i></a> 
+                </div>
+                    <h2>Hi, I'm Manahil Aamir</h2>
+                    <p class="home-content">I am a Web Developer and Full Stack Developer.</p>
+                    <button class="hire-btn">Hire Me</button>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section" style="display: none;">
+        <div class="about-container">
+            <div class="about-left">
+                <div class="about-box" onclick="showText('about-content')">
+                    <h1>About Me! </h1>
+                    <h2>I'm<span class="name-highlight"> Manahil</span></h2>
+                    <p class="about-content">A passionate Full Stack Developer with expertise in building interactive and user-friendly web applications.</p>
+                    <p class="about-content">I love solving problems, creating innovative digital solutions, and bringing ideas to life.</p>
+                    <p> I'm drive for innovation. I specialize in both front-end and back-end development</p>
+                </div>
+            </div>
+            <div class="about-right">
+                <img src="Mypic.jpg" alt="Manahil Aamir" class="glowing-pic">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section" style="display: none;">
+      
+        <div class="services-container">
+            <h2>My Services</h2>
+            <div class="service-box">
+                
+                <img src="web developer.jpg" alt="Web-dev">
+                <h3>Web Developer</h3>
+                <p>Building interactive and user-friendly websites.</p>
+            </div>
+            <div class="service-box">
+                <img src="web dev-icon.jpg" alt="Web-dev">
+                <h3>Backend Developer</h3>
+                <p>Creating powerful server-side applications.</p>
+            </div>
+            <div class="service-box">
+                <img src="UI UX Design .jpg" alt="Web-dev">
+                <h3>UI/UX Designer</h3>
+                <p>Designing seamless user experiences.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-container" style="display:none">
+        <h2>Contact Me</h2>
+        <p>Email:minahilamir2012@gmail.com</p>
+        <p>Phoneno:03440052796</p>
+        <p>Pls fill out the form</p>
+        
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        
+        <div id="success-message" style="display: none;">
+            <p>Message sent successfully! I'll get back to you soon.</p>
+        </div>
+    </section>
+
+    <script>
+        var typed = new Typed("#typing", {
+            strings: ["I am a Creative Coder", "Web Developer", "Full Stack Developer"],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        });
+        function showText(contentId) {
+    var content = document.getElementById(contentId);
+    
+    if (content.classList.contains('show-content')) {
+        content.classList.remove('show-content'); 
+        setTimeout(() => { content.style.display = 'none'; }, 500); // Thoda delay rakho
+    } else {
+        content.style.display = 'block';  
+        setTimeout(() => { content.classList.add('show-content'); }, 10); // Smooth transition ke liye delay
+    }
+}
+
+
+     function showSection(section) {
+    // Hide all sections
+    document.querySelectorAll('.section').forEach(sec => sec.style.display = 'none');
+
+    // Show the clicked section
+    document.getElementById(section).style.display = 'block';
+
+    // Remove active class from all links
+    document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
+
+    // Add active class to the clicked link
+    var activeLink = document.querySelector(`.nav-links a[href="#${section}"]`);
+    activeLink.classList.add('active');
+}
+   
+    </script>
+
+</body>
+</html>

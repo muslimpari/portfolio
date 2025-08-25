@@ -1,0 +1,404 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #068D9D, #53599A, #6D9DC5);
+    color: rgb(248, 254, 254);
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    padding-left: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+
+/* Profile Heading */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-header h1 {
+    margin: 0;
+    padding-left: 10px;
+}
+
+/* Small Profile Pic in Header */
+.small-profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 10px #ef49e1;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+.small-profile-pic :hover{
+    color:#FFDD57
+}
+
+/* Navigation */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 70px;
+    padding-left: 5px;
+    nav-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+   
+}
+.nav-links a:hover {
+    color: #f388f7; /* Purple color on hover */
+}
+.nav-links a:active, 
+.nav-links a.active {
+    color: #f388f7; /* Purple color */
+    font-weight: bold;
+    background: none; /* Removes yellow highlight */
+}
+.nav-links a.active {
+    color: #FF6347;  /* Aap chahein toh koi bhi color set kar sakte hain */
+    font-weight: bold;
+}
+
+
+
+/* Home Page */
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 50px;
+}
+
+/* Animated Text */
+#typing {
+    font-size: 1.8rem;
+    font-weight: bold;
+    animation: fadeIn 2s infinite alternate;
+}
+
+/* Center Profile Image */
+.home-center .home-profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 15px #FFDD57;
+    animation: glowingCircle 2s infinite alternate;
+}
+
+/* Right Content Box */
+.home-right .content-box {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #068D9D;
+    animation: glowing 1.5s infinite alternate;
+    max-width: 400px;
+    cursor: pointer;
+}
+
+/* Button */
+.hire-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    align-items: center;
+    background-color: #068D9D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px #84c3f0e9;
+    animation: glowing 1.5s infinite alternate;
+}
+
+.hire-btn:hover {
+    background-color: #53599A;
+    box-shadow: 0 0 20px #ebba0c;
+}
+.social-icons  {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+i.bx {
+    color: #FFDD57;
+    border-radius: 50%;
+    border:2px solid #ef49e1;
+    background:transparent;
+    font-size: 30px;
+    box-shadow: 0 0 10px #ef49e1;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+
+}
+i.bx:hover{
+    box-shadow: 0 0 20px #FFDD57;
+}
+
+
+.social-icon a svg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background:transparent;
+    border:2px solid #ef49e1;
+    border-radius: 50%;
+    font-size: 20px;
+    color:#ef49e1;
+    background-size: cover;
+    box-shadow: 0 0 10px #ef49e1;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icon:hover svg {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #FFDD57;
+}
+
+
+/* About Page */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 50px;
+}
+.about-container h1{
+    margin-top:50px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    color:#ef49e1;
+
+}
+.about-container h2{
+    
+    color:#ffffff;
+
+}
+.name-highlight {
+    color: #ef49e1; /* Manahil ka color change kar diya (Customize as needed) */
+}
+
+.about-left .about-box {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #068D9D;
+    animation: glowing 1.5s infinite alternate;
+    max-width: 400px;
+    cursor: pointer;
+}
+.about-container h1{
+    color:#ef49e1;
+}
+/* Content Animation (Text inside box) */
+
+/* About Page Image */
+.about-right .glowing-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 15px #FFDD57;
+    animation: glowingCircle 2s infinite alternate;
+}
+
+/* Content Animation (Text inside box) */
+.show-content {
+    animation: fadeInContent 1.5s ease-in-out;
+    color:#ef49e1
+}
+.services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom: 200px;
+    gap: 80px; /* Add 10px spacing between the boxes */
+    flex-wrap: wrap; /* Allow boxes to wrap to the next line if needed */
+    padding: 10px;
+}
+.services-container h2{
+  display:flex;
+  flex-direction: column; /* Ensures elements stack vertically */
+  align-items: center;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-inline-start: 20px;
+  font-size: 50px;
+
+
+}
+.service-box {
+    display: flex;
+    justify-content: center;
+    padding-top: 8px; /* Centers boxes horizontally */
+    gap: 80px; /* Space between boxes */
+    flex-wrap: wrap; /* Allows wrapping if needed */
+    width: 100%;
+    background-color: rgba(30, 215, 202, 0.5);
+    border-radius: 30px;
+    box-shadow: 0 0 15px #FFDD57;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    animation: glowing 1.5s infinite alternate;
+}
+.service-box img {
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    border-radius: 50%; /* Makes image circular */
+    box-shadow: 0 0 15px #ef49e1;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    animation: glowing 1.5s infinite alternate;
+    object-fit: cover;
+}
+
+
+.service-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color:#fff7fe
+}
+
+.service-box p {
+    font-size: 1.2rem;
+    color: rgb(150, 20, 120);
+}
+
+/* Hover effect for service boxes */
+.service-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #FFDD57;
+}
+
+.contact-container {
+        text-align: center;
+        padding: 50px;
+        max-width: 500px;
+        margin: 100px auto;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        box-shadow: 0 0 10px #FFDD57;
+    }
+    
+    .contact-container h2 {
+        font-size: 2rem;
+        margin-top: 40px;
+        color:#ef49e1
+    }
+    
+    .contact-container p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    form input, form textarea {
+        width: 50%;
+        padding: 10px;
+        margin: 5px 0;
+        margin-left: 100px;
+        border: 1px solid #067d28;
+        border-radius: 5px;
+        font-size: 1rem;
+        
+    }
+    
+    form textarea {
+        height: 150px;
+    }
+    
+    button {
+    margin-top: 20px;
+    padding: 12px;
+    align-items: center;
+    background-color: #068D9D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px #FFDD57;
+    animation: glowing 1.5s infinite alternate;
+    }
+    
+    button:hover {
+        background-color: #53599A;
+    }
+    
+/* Animations */
+@keyframes glowingCircle {
+    0% {
+        box-shadow: 0 0 15px #FFDD57, 0 0 40px #FFDD57, 0 0 60px #FFDD57, 0 0 80px #068D9D;
+    }
+    25% {
+        box-shadow: 0 0 15px #FFDD57, 0 0 40px #FFDD57, 0 0 60px #FFDD57, 0 0 80px #53599A;
+    }
+    50% {
+        box-shadow: 0 0 15px #FFDD57, 0 0 40px #FFDD57, 0 0 60px #FFDD57, 0 0 80px #FFDD57;
+    }
+    75% {
+        box-shadow: 0 0 15px #FFDD57, 0 0 40px #FFDD57, 0 0 60px #FFDD57, 0 0 80px #068D9D;
+    }
+    100% {
+        box-shadow: 0 0 15px #FFDD57, 0 0 40px #FFDD57, 0 0 60px #FFDD57, 0 0 80px #6D9DC5;
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInContent {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
